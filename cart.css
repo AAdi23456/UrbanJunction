@@ -1,0 +1,37 @@
+.price-container {
+    max-width: 600px;
+   margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .price-item {
+    margin-bottom: 10px;
+  }
+  
+  .price-item h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .price-item p {
+    font-size: 16px;
+    color: #008080;
+    margin: 0;
+  }
+  
