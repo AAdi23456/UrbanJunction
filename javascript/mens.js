@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const main = document.getElementById("main");
-
-  //localStorage.setItem("token", JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh2ayIsImlhdCI6MTY4NzM3OTM5NX0.3MeNTPonff9E9ZGm7cmffMraV6nUZ0Qb8soQxyw8Qrs"));
-
+  
   const url = "http://localhost:3000/men/show";
   const Cart_url = "http://localhost:3000/cart/add";
   
