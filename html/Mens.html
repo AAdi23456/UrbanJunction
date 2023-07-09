@@ -1,18 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./mens.css">
+    <style>
+       #card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  /* height: 400px; */
+  /* padding: 10px; */
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#card:hover {
+  transform: scale(1.05) translateY(-5px);
+  /* Adjust the scale and translateY values as desired */
+}
+
+        .card_img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card_title {
+            font-size: 16px;
+            margin-top: 5px;
+            /* Adjust the margin value to decrease spacing */
+            margin-bottom: 5px;
+            /* Adjust the margin value to decrease spacing */
+            text-align: center;
+        }
+
+        .card_brand {
+            font-size: 14px;
+            margin-top: 5px;
+            /* Adjust the margin value to decrease spacing */
+            margin-bottom: 5px;
+            /* Adjust the margin value to decrease spacing */
+            text-align: center;
+        }
+
+        .card_price {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+            /* Adjust the margin value to decrease spacing */
+            margin-bottom: 5px;
+            /* Adjust the margin value to decrease spacing */
+            text-align: center;
+        }
+
+        .cart-button {
+            /* //margin-top: auto; */
+            margin-bottom: 25px;
+            /* Adjust the margin value to decrease spacing */
+        }
+
+
+        #card {
+            /* border: solid red 5px ; */
+
+            height: 95%;
+
+            width: 80%;
+
+        }
+
+        #card img {
+            height: 60%;
+            width: 100%;
+
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* border: solid 5px red; */
+            margin-left: 2%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+        }
+
+       
+        .container {
+            display: flex;
+            background-color: rgb(247, 246, 244);
+            margin-top: 2%;
+        }
+
+        .filter-buttons {
+            flex-basis: 20%;
+            padding-right: 20px;
+            /* border: solid 5px black */
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+            height:200px;
+           
+        }
+        .filter-buttons  div{
+            margin-top: 20%;
+        }
+        .main-content {
+            flex-basis: 90%;
+        }
+
+        .filter-buttons label {
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            margin-bottom: 10px;
+        }
+        #navbar{
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            background-color:  rgb(247, 246, 244);
+        }
+        
+    </style>
 </head>
+
+
 <body>
-    <div id="main">
+    <div id="navbar"></div>
 
+    <div class="container">
+        <div class="filter-buttons">
+            <div>
+                <label for="category-filter">Filter by category:</label>
+                <select id="category-filter">
+                    <option value="">All</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
+                </select>
+            </div>
+            <div>
+                <label for="price-sort">Sort by price:</label>
+                <select id="price-sort">
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- <div class="search-bar">
+                <label for="name-search">Search by name:</label>
+                <input type="text" id="name-search">
+                <button onclick="performSearch()">Search</button>
+            </div> -->
+            <div id="main"></div>
+        </div>
     </div>
-    
+    <script>
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+          });
+          
+      </script>
+      <script src="../javascript/mens.js"></script>
 </body>
-</html>
-<script src="./mens.js">
 
-</script>
+</html>
+

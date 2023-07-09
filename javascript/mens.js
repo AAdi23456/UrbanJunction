@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const main = document.getElementById("main");
-  
+ // document.getElementById("search").value="hvbahbruler"
   const url = "http://localhost:3000/men/show";
   const Cart_url = "http://localhost:3000/cart/add";
   
