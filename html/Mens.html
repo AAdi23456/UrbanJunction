@@ -11,9 +11,6 @@
   flex-direction: column;
   align-items: center;
   width: 200px;
-  /* height: 400px; */
-  /* padding: 10px; */
-  /* border: 1px solid #ccc; */
   box-sizing: border-box;
   margin: 10px;
   transition: transform 0.3s ease;
@@ -22,7 +19,7 @@
 
 #card:hover {
   transform: scale(1.05) translateY(-5px);
-  /* Adjust the scale and translateY values as desired */
+ 
 }
 
         .card_img {
@@ -123,48 +120,264 @@
             box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
             background-color:  rgb(247, 246, 244);
         }
-        
+        @media (max-width: 1000px) {
+            #main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            #main {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .filter-buttons {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+                text-align: right;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            .filter-list {
+                display: none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                background-color: #fff;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                position: absolute;
+                right: 0;
+                top: 100%;
+                z-index: 9999;
+            }
+
+            .filter-list li {
+                padding: 10px;
+            }
+
+            .hamburger-menu.open .filter-list {
+                display: block;
+            }
+        }
+        nav {
+  background: linear-gradient(to right, #0066ff, #00ccff); /* Gradient blue background */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+  background-color: white;
+}
+@media (max-width: 768px) {
+    /* Adjust the breakpoint as needed */
+    .menu li {
+      display: none;
+    }
+
+    .menu li:last-child {
+      display: inline-block;
+      margin-right: 0;
+    }
+
+    .search-container {
+      flex: 1;
+      text-align: right;
+    }
+
+    .search-container input[type="text"] {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .filter-buttons {
+      display: none;
+    }
+  }
+
+  /* Additional styles for the responsive navbar */
+
+  .hamburger-menu {
+    display: none;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .filter-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+  }
+
+  .filter-list li {
+    padding: 10px;
+  }
+
+  .hamburger-menu.open .filter-list {
+    display: block;
+  }
+  .hamburger-menu {
+            display: none;
+            text-align: right;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .filter-list {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            right: 0;
+            top: 100%;
+            z-index: 9999;
+        }
+
+        .filter-list li {
+            padding: 10px;
+        }
+
+        .hamburger-menu.open .filter-list {
+            display: block;
+        }
     </style>
 </head>
 
 
 <body>
-    <div id="navbar"></div>
+    <nav>
+        <div class="logo">
+    <img src="../images/urbanjunctionbg (1).png" style="width: 6%;">
+        </div>
+        <ul class="menu">
+          <li><a href="./cart.html">Cart</a></li>
+          <!-- <li class="dropdown">
+            <a href="#">Products</a>
+            <div class="dropdown-content">
+              <a href="#">Category 1</a>
+              <a href="#">Category 2</a>
+              <a href="#">Category 3</a>
+            </div>
+          </li> -->
+          <li><a href="https://aadi23456.github.io/">About</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Search" id="search">
+        </div>
+      </nav>
+  
 
     <div class="container">
         <div class="filter-buttons">
+           
             <div>
-                <label for="category-filter">Filter by category:</label>
+                <label for="category-filter">Filter by Brand:</label>
                 <select id="category-filter">
                     <option value="">All</option>
-                    <option value="men">Men</option>
-                    <option value="women">Women</option>
-                    <option value="kids">Kids</option>
+                    <option value="Allen Solly">Allen Solly</option>
+                    <option value="VeBNoR">VeBNoR</option>
+                    <option value="Tanip">Tanip</option>
+                    <option value="Majestic Man">Majestic Man</option>
+                    <option value="B & E LIFESTYLE">B & E LIFESTYLE</option>
                 </select>
             </div>
             <div>
                 <label for="price-sort">Sort by price:</label>
                 <select id="price-sort">
-                    <option value="low-to-high">Low to High</option>
-                    <option value="high-to-low">High to Low</option>
+                    <option value="asc">Low to High</option>
+                    <option value="desc">High to Low</option>
                 </select>
             </div>
         </div>
         <div class="main-content">
-            <!-- <div class="search-bar">
-                <label for="name-search">Search by name:</label>
-                <input type="text" id="name-search">
-                <button onclick="performSearch()">Search</button>
-            </div> -->
+            
             <div id="main"></div>
         </div>
     </div>
     <script>
-        fetch('navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-          });
+        // fetch('navbar.html')
+        //   .then(response => response.text())
+        //   .then(data => {
+        //     document.getElementById('navbar').innerHTML = data;
+        //   });
           
       </script>
       <script src="../javascript/mens.js"></script>

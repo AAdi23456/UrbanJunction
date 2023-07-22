@@ -5,8 +5,12 @@ let discount_price=document.getElementById("discount-price")
 let total_pr=document.getElementById("total-pr")
 let total_item=document.getElementById("total-item")
 let total_pay=document.getElementById("total-pay")
-let Remove_Url=`http://localhost:3000/cart/Remove/`
-fetch("http://localhost:3000/cart/show", {
+let Remove_Url=`https://colorful-helmet-slug.cyclic.app/cart/Remove/`
+if(!data){
+  alert("Please login first")
+  window.location.href="../login-form-06/index.html"
+}
+fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -99,7 +103,7 @@ fetch("http://localhost:3000/cart/show", {
     }
   });
   function updateQuantity(cardId, newQuantity) {
-    const updateUrl = `http://localhost:3000/cart/quantity/${cardId}`;
+    const updateUrl = `https://colorful-helmet-slug.cyclic.app/cart/quantity/${cardId}`;
     fetch(updateUrl, {
       method: 'PATCH',
       headers: {

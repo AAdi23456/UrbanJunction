@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="wel">Welcome, John Doe!</h1>
+        <a href="#">Logout</a>
+    </header>
+
+    <main>
+        <section class="profile-info">
+            <!-- <div class="profile-picture">
+                <img src="profile_picture.jpg" alt="Profile Picture">
+            </div> -->
+            <div class="profile-details">
+                <h2 id="name">John Doe</h2>
+                <p id="email">Email: johndoe@example.com</p>
+                <!-- <p>Address: 123 Main Street, City, Country</p>
+                <p>Phone: +1 123-456-7890</p> -->
+            </div>
+        </section>
+
+        <section class="order-history">
+            <h2>Order History</h2>
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>12345</td>
+                    <td>2023-07-20</td>
+                    <td>$100.00</td>
+                    <td>Delivered</td>
+                </tr>
+                <tr>
+                    <td>67890</td>
+                    <td>2023-07-15</td>
+                    <td>$50.00</td>
+                    <td>Shipped</td>
+                </tr>
+                <!-- Add more order history rows as needed -->
+            </table>
+        </section>
+    </main>
+    <script>
+        const name=document.getElementById("name")
+        const email=document.getElementById("email")
+        const wel=document.getElementById("wel")
+        const namee=JSON.parse(localStorage.getItem("name"))
+        const emaile=JSON.parse(localStorage.getItem("email"))
+        if(!namee||!emaile){
+            alert("please login first to see your profile")
+            window.location.href="../login-form-06/index.html"
+        }
+        name.innerText=namee
+        email.innerText=emaile
+        wel.innerText=`Welcome, ${namee}!`
+    </script>
+</body>
+
+</html>

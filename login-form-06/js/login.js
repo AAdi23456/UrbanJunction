@@ -13,7 +13,8 @@ function loginData(){
       email,
       password
   }
-  fetch("http://localhost:3000/auth/login", {
+  console.log(data);
+  fetch("https://colorful-helmet-slug.cyclic.app/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,11 +24,8 @@ function loginData(){
      
     })
     .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error('Request failed with status ' + response.status);
-      }
+     return response.json()
+     
     })
     .then(data => {
       
@@ -35,10 +33,14 @@ function loginData(){
   
         alert(data.msg)
       }
-      
+      if(data.token){
+      localStorage.setItem("name", JSON.stringify(data.name));
+      localStorage.setItem("email", JSON.stringify(data.email));
      localStorage.setItem("token", JSON.stringify(data.token));
+     window.location.href="../html/index.html"
+      }
     }) 
     .catch(error => {
-      console.error(error);
+     // console.error(error);
     });
 }
