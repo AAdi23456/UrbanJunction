@@ -202,7 +202,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
         quantity:resdata.length,
         totalprice:JSON.parse(localStorage.getItem("Amount")),
         Arriving:Date.now(),
-        status:"orderd"
+        status:"pending"
        }
       
         const response = await fetch(url, {
@@ -219,6 +219,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
           // Successful response (status code 2xx)
           const responseData = await response.json(); // Parse the JSON response
           console.log("Response data:", responseData);
+          window.location.href="orders.html"
         } else {
           // Handle error responses (status codes other than 2xx)
           const errorData = await response.json(); // Parse the JSON error response
@@ -232,5 +233,5 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
       
     }
    
-     
+   
   }

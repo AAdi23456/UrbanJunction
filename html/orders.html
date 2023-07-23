@@ -150,6 +150,7 @@
 
         }
         function displayOrderDetails(order) {
+            sessionStorage.setItem("orderid",JSON.stringify(order._id))
             root.innerHTML = `
         <div id="order-details">
           <h2>Order Details</h2>
