@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <style>
+        /* styles.css */
+
+        /* Reset some default styles */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Form styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        textarea {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Table styles for viewing orders */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Button styles */
+        .btn-cancel {
+            background-color: #dc3545;
+        }
+
+        /* Optional: Add more styles to enhance the appearance */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Place Order</h1>
+    </header>
+
+    <main>
+        <div id="root">
+           
+        </div>
+        <!-- //<form id="order-form"> -->
+          
+
+            <button type="submit" onclick="oncikkk()">Place Order</button>
+       <!-- // </form> -->
+    </main>
+
+    <script>
+        
+      //  const orderForm = document.getElementById("order-form");
+        getdet()
+        async function getdet() {
+
+            const token = JSON.parse(localStorage.getItem("token"))
+
+            try {
+                const response = await fetch("https://colorful-helmet-slug.cyclic.app/order/details", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "token": token,
+                    },
+
+                });
+
+                if (response.ok) {
+                    const order = await response.json();
+                    console.log(response);
+                    displayOrderDetails(order[order.length - 1]);
+                } else {
+                    const errorData = await response.json();
+                    console.log("Error placing order:", errorData.msg);
+                }
+            } catch (error) {
+                console.error("An error occurred while placing the order:", error);
+            }
+
+        }
+        function displayOrderDetails(order) {
+            root.innerHTML = `
+        <div id="order-details">
+          <h2>Order Details</h2>
+          <p>Quantity: ${order.quantity}</p>
+          <p>Total Price: ${order.totalprice}</p>
+          <h3>Products:</h3>
+          <ul>
+            ${order.products.map(product => `<li>title: ${product.title}, Price: ${product.price}, Quantity: ${product.quantity}</li>`).join("")}
+          </ul>
+          <p>Address: ${order.address}</p>
+          <p>Arriving: ${order.Arriving}</p>
+          <p>Email: ${order.email}</p>
+          <p>Status: ${order.status}</p>
+        </div>
+      `;
+        }
+       function oncikkk(){
+        window.location.href="payment.html"
+       }
+    </script>
+</body>
+
+</html>

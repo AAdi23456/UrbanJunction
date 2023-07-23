@@ -1,4 +1,5 @@
 let data=JSON.parse(localStorage.getItem("token"))
+const token=data
 let total=0
 let total_price=document.querySelector(".total-price")
 let discount_price=document.getElementById("discount-price")
@@ -6,6 +7,7 @@ let total_pr=document.getElementById("total-pr")
 let total_item=document.getElementById("total-item")
 let total_pay=document.getElementById("total-pay")
 let Remove_Url=`https://colorful-helmet-slug.cyclic.app/cart/Remove/`
+let totalprice ;
 if(!data){
   alert("Please login first")
   window.location.href="../login-form-06/index.html"
@@ -35,6 +37,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
     total_item.innerText=data.length
     MappingtheResponse(data)
    let TotalSum=CalTotalPtice(data) 
+   totalprice=TotalSum
    console.log(TotalSum);
    total_price.textContent=TotalSum
    total_pay.textContent=TotalSum
@@ -178,30 +181,56 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
       updateQuantity(cardId, newQuantity);
     }
   });
-  //  function AgaincallTotalprice(){
-  //   fetch("http://localhost:3000/cart/show", {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       "token":data
-  //     },
-  
+  async function paymentpage(){
+    const res=await fetch("https://colorful-helmet-slug.cyclic.app/cart/show",{
+         method:"POST",
+         headers:{
+          "Content-Type": "application/json",
+          token:token
+         },
+         
+    });
+    if(res.ok){
+      const resdata=await res.json()
+      if(resdata.length<=0){
+        return alert("please add some product in cart")
+      }
+      try {
+        const url = "https://colorful-helmet-slug.cyclic.app/order/new";
+       const obj={
+        products:resdata,
+        quantity:resdata.length,
+        totalprice:JSON.parse(localStorage.getItem("Amount")),
+        Arriving:Date.now(),
+        status:"orderd"
+       }
+      
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json", // Set the content type as JSON
+            // Add any other headers as required (e.g., Authorization header with token)
+            "token":token
+          },
+          body: JSON.stringify(obj), 
+        });
+      
+        if (response.ok) {
+          // Successful response (status code 2xx)
+          const responseData = await response.json(); // Parse the JSON response
+          console.log("Response data:", responseData);
+        } else {
+          // Handle error responses (status codes other than 2xx)
+          const errorData = await response.json(); // Parse the JSON error response
+          console.error("Error data:", errorData);
+        }
+      } catch (error) {
+        // Handle any network errors or exceptions
+        console.error("An error occurred:", error);
+      }
+      
+      
+    }
+   
      
-  //   })
-  //   .then(response => {
-  //     if (response.ok) {
-  //       return response.json();
-  //     } else {
-  //       throw new Error('Request failed with status ' + response.status);
-  //     }
-  //   })
-  //   .then(data => {
-  //     let TotalSum=CalTotalPtice(data) 
-  //     console.log(TotalSum);
-  //     total_price.textContent=""
-  //     total_pay.textContent=""
-  //     total_price.textContent=TotalSum
-  //     total_pay.textContent=TotalSum
-  //    //to
-  //   })
-  // }
+  }
