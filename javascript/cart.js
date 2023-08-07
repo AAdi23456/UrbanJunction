@@ -41,7 +41,7 @@ fetch("https://gifted-tights-yak.cyclic.app/cart/show", {
    totalprice=TotalSum
    console.log(TotalSum);
    total_price.textContent=TotalSum
-   total_pay.textContent=TotalSum
+   //total_pay.textContent=TotalSum
    localStorage.setItem("Amount", TotalSum);
   }) 
   .catch(error => {

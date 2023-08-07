@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Order</title>
     <style>
-        /* styles.css */
+     
+       
 
-        /* Reset some default styles */
-        body,
+          /* Reset some default styles */
+          body,
         h1,
         h2,
         h3,
@@ -46,6 +47,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-bottom: 20px; /* Added margin at the bottom */
         }
 
         label {
@@ -97,8 +99,47 @@
         .btn-cancel {
             background-color: #dc3545;
         }
+        .footer {
+  background-color: #88e49f; /* Blue background */
+  color: #120505;
+  padding: 20px 0;
+}
 
-        /* Optional: Add more styles to enhance the appearance */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links a {
+  color: #170202;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  background-color: #0b0c0b; /* Light green background */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
     </style>
 </head>
 
@@ -117,7 +158,23 @@
             <button type="submit" onclick="oncikkk()">Place Order</button>
        <!-- // </form> -->
     </main>
-
+    <div class="content">
+       
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo"> Urbanjunction</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Mens.html">Shop</a>
+          <a href="https://aadi23456.github.io/">About Us</a>
+          <a href="https://aadi23456.github.io/">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: wheat;">&copy; 2023 Urbanjunction. All rights reserved.</p>
+      </div>
+    </footer>
     <script>
         
       //  const orderForm = document.getElementById("order-form");
@@ -160,7 +217,7 @@
           <ul>
             ${order.products.map(product => `<li>title: ${product.title}, Price: ${product.price}, Quantity: ${product.quantity}</li>`).join("")}
           </ul>
-          <p>Address: ${order.address}</p>
+          <p>Address:"Madhubani,bihar,india,847211"</p>
           <p>Arriving: ${order.Arriving}</p>
           <p>Email: ${order.email}</p>
           <p>Status: ${order.status}</p>
