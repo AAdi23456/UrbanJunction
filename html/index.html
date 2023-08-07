@@ -1,62 +1,1417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazing E-commerce Landing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FINISH LINE-AADI CREATION</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+     .scont2 {
+    display: inline-block;
+    margin-right: 10px; 
+    padding-left: 5px; 
+    border-left: 1px solid black; 
+    line-height: 3; 
+  }
+
+  .scont2:first-child {
+    border-left: none;
+    padding-left: 0; 
+  }
+
+  .scont2 a {
+    text-decoration: none;
+    color: #000;
+  }
+        .navbar1 {
+            overflow: hidden;
+
+            font-family: Arial;
+        }
+
+        /* Links inside the navbar */
+        .navbar1 p {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* The dropdown container */
+        .column1 h3 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .dropdown1 {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown1 .dropbtn1 {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font: inherit;
+            
+            margin: 0;
+          
+        }
+
+       
+        .navbar1 p:hover,
+        .dropdown1:hover .dropbtn1 {
+            background-color: whitesmoke;
+        }
+
+       
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            left: 0;
+            height: 600px;
+            z-index: 1;
+        }
+
+      
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+
+       
+        .column1 {
+            float: left;
+            /* width: 33.33%; */
+            padding: 10px;
+            background-color: white;
+            height: 270px;
+        }
+
+       
+        .column1 p {
+            float: none;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+       
+        .row1:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .dropbtn1 {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="../images/urbanjunctionbg (1).png" alt="Logo">
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="./profile.html">Profile</a></li>
-                <li><a href="./Mens.html">Categories</a>
-                    <ul class="submenu">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Kid</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://aadi23456.github.io/">About</a></li>
-              
-                <li><a href="../login-form-06//index.html">Login</a></li>
-                <li><a href="../signup-form-16/index.html">Signup</a></li>
-            </ul>
-        </nav>
-        <div class="search-container">
-            <input type="text" placeholder="Search products">
-            <button>Search</button>
-        </div>
-    </header>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/urbanjunctionbg (1).png"
+                    alt="Bootstrap" style="width:300%;margin-bottom:50px" >
+            </a>
+            <input type="text" placeholder="search" id="search">
+           
+            <a href="profile.html" style="text-decoration: none;color:black;">Account</a>
+            <a href="cart.html" style="text-decoration: none;color:black;">Bag</a>
 
-    <main>
-        <section class="categories">
-            <h2>Categories</h2>
-            <div class="category-card">
-                <img src="dummy_image_1.jpg" alt="Category 1">
-                <h3>Category 1</h3>
-            </div>
-            <div class="category-card">
-                <img src="dummy_image_2.jpg" alt="Category 2">
-                <h3>Category 2</h3>
-            </div>
-            <div class="category-card">
-                <img src="dummy_image_3.jpg" alt="Category 3">
-                <h3>Category 3</h3>
-            </div>
-            <!-- Add more category cards as needed -->
-        </section>
-    </main>
+        </div>
+    </nav>
+    <!-- ************************nav bar ends************* -->
+    <div style="display: flex;margin-bottom: 40px">
+        <div class="navbar1" style="margin-left: 50px;">
 
-    <footer>
-        <!-- Add footer content here -->
-    </footer>
+            <!-- <div class="dropdown1">
+                <a href="newArrival.html" class="dropbtn1" style="color: black;margin:auto;">NEW ARRIVALS
+                    <i class="fa fa-caret-down"></i>
+                </a>
+
+                <div class="dropdown-content1">
+
+                    <div class="row1" style="margin-top: -10px;">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;"
+                                src="https://images.unsplash.com/photo-1481729379561-01e43a3e1ed4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9vdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="Mens.html" class="dropbtn1" style="color: black;">Men
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="womens.html" class="dropbtn1" style="color: black;">WOMEN
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdvbWVucyUyMHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="Mens.html" class="dropbtn1" style="color: black;">BOYS
+
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1619646176605-b7417fb53b1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb3R3ZWFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="womens.html" class="dropbtn1" style="color: black;">GIRLS
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1563662931846-29b0af7443ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb3R3ZWFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="Mens.html" class="dropbtn1" style="color: black;">CLOTHING
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px; margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdGhpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="shoes.html" class="dropbtn1" style="color: black;">ACCESSORIES
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;margin-top: 30px;"
+                                src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3RoaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar1" style="margin-left: 50px;">
+
+            <div class="dropdown1">
+                <a href="Mens.html" class="dropbtn1" style="color: black;">SALE
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content1">
+
+                    <div class="row1">
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;margin-left: 14px;">shoes</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Running
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Casual
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Boots
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Training
+                                & Cleats</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Sandals,
+                                Slides & Slippers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Sizes
+                                14-20</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Best
+                                Sellers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Styles
+                                Under $100</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">All
+                                Shoes
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Clothing</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Hoodies
+                                & Sweatshirts</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Sweatpants & Joggers</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Jackets,
+                                Coats & Vests</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shirts,
+                                Tanks & Graphic Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Shorts &
+                                Swimwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Matching
+                                Sets</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Buy
+                                One
+                                Get One 50% Off Tees
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Fan
+                                Gear
+                                & Jerseys</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Socks &
+                                Underwear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">Denim
+                                &
+                                Jeans</p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                font-family:Arial, Helvetica, sans-serif;
+                Color:
+                #333333;font: size 13px;margin-left: 14px;">Brands</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Nike
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                Jordan
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">
+                                adidas
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Timberland</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size:12px;margin-top: -20px;">New
+                                Balance</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">The
+                                North Face</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">On
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">Puma
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Crocs
+                            </p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 12px;margin-top: -20px;">
+                                Reebok
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <h3 style="
+                    font-family:Arial, Helvetica, sans-serif;
+                    Color:
+                    #333333;font: size 13px;">Trending</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Recent Releases</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Winter Essentials</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">All White Styles</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Men's Cargo</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">New Era Team Gear</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif;font-size: 13px;">Nike Tech Fleece
+                                Outfits
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img id="img" style="width: 400px;height: 300px; margin-left: 40px;"
+                                src="https://images.unsplash.com/photo-1481729379561-01e43a3e1ed4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9vdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <!-- ****************************************** -->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="">
+                <div class="cont1">
+                    <h4>WEEKEND SAVINGS</h4>
+                    <h6>70% off</h6>
+                    <a >Shop now</a>
+                    <a >details</a>
+                </div>
+            </div>
+            <div class="cont1">
+                <div class="carousel-item" data-bs-interval="">
+                    <h4>WEEKEND SAVINGS</h4>
+                    <h6>70% off</h6>
+                    <a >Shop now</a>
+                    <a >details</a>
+                </div>
+            </div>
+            <div class="cont1">
+                <div class="carousel-item">
+                    <h4>WEEKEND SAVINGS</h4>
+                    <h6>70% off</h6>
+                    <a >Shop now</a>
+                    <a >details</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- ************************* -->
+    <img onclick="prooduct()" src="https://finishline.a.bigcontent.io/v1/static/JD_FNL_010923_nike_Flush_Email_Banner_Desktop_1213x300_fixed"
+        id="ban" alt="shoes">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video loop="" muted="" autoplay="" class="promo-background-video-desktop hide-for-small-only"
+                    style="margin-top: 20px;margin-left: 15px;margin-right: 15px;">
+                    <source
+                        src="https://cdn.static.amplience.net/finishline/_vid/fnl_ga_010923_heroslider_m_thenorthface_apparel_1213x600/78e3184e-ee9e-41da-b19f-130450ba8449/video/182a3516-3a16-4a49-b595-9c0d5faa660d.mp4"
+                        class="d-block w-100" alt="..." type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <img  style="margin-top: 20px;margin-left: 15px;margin-right: 15px;"src="https://images.unsplash.com/photo-1606036525923-525fa3b35465?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJvb3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img  style="margin-top: 20px;margin-left: 15px;margin-right: 15px;"src="https://media.istockphoto.com/id/1346904638/photo/hiking-boot-on-road-in-autumn.jpg?b=1&s=170667a&w=0&k=20&c=09x-bNCfotMRaXBLtZ1IyEDJKkAfnfCMSwqONYuVJu0="
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="cont2" onclick="prooduct()">
+        <!-- <div class="scont2">
+            <a style="text-decoration: none;color: #000;" href="">men`s showes</a>
+
+        </div> -->
+        <div class="scont2">
+            <a href="">Men section</a>
+          </div>
+          <div class="scont2">
+            <a href="">Women section</a>
+          </div>
+          <div class="scont2">
+            <a href="">Kids section</a>
+          </div>
+          <div class="scont2">
+            <a href="">Shoes</a>
+          </div>
+        <!-- <div class="scont2">
+            <a style="text-decoration: none;color: #000;border-left:1px solid black;" href="">men`s showes</a>
+        </div>
+        <div class="scont2">
+            <a style="text-decoration: none;color: #000;border-left:1px solid black;" href="">men`s showes</a>
+        </div> -->
+    </div>
+    <!-- ********************************************************************************** -->
+    <h4 id="shop">SHOP THE LATEST & GREATEST STYLES</h4>
+    <div class="cont3" onclick="prooduct()">
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/i/finishline/DV0826_001_P1?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Recent Releases</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/i/finishline/DN9782_001_P1?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Jordan</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/i/finishline/CW2288_111_P1?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Best Sellers</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/i/finishline/DD6958_001_P1?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Basketball</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/s/finishline/DD5016_001?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Boots</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/s/finishline/NF0A7ZGX_610?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Matching Sets</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/i/finishline/DV0537_070_M3?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Best Sellers</a>
+        </div>
+        <div>
+            <img style="width: 100%;" src="https://media.finishline.com/s/finishline/DX2036_434?$Small$">
+            <a style="text-decoration: none;color: #000;" href="">Outerwear up to 40% off</a>
+        </div>
+
+    </div>
+    <!-- ************************************************************************************* -->
+   
+    
+    
+    <div>
+        <h5 style="text-align: center;margin-top: 40px;" onclick="prooduct()">FEATURED COLLECTIONS</h5>
+        <img style="width:95%;height:600px; margin-top: 20px;margin-left:30px;"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8d29vZGxhbmQlMjBzaG9lcyUyMHdpdGglMjB0ZXh0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+    </div>
+    <div class="cont6" onclick="prooduct()">
+        <div>
+            <img
+                src="https://images.unsplash.com/photo-1557418669-db3f781a58c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGphY2tldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60">
+            <a style="text-decoration: underline;">Outerwear</a>
+        </div>
+        <div>
+            <img style="height:878px;width: 602px;"
+                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60">
+            <a style="text-decoration: underline;">sandels</a>
+        </div>
+        <div>
+            <img
+                src="https://images.unsplash.com/photo-1495494527480-87e8644f0d99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FuZGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60">
+            <a style="text-decoration: underline;">Just Want It</a>
+        </div>
+        <div>
+            <img style="width:607px;"
+                src="https://images.unsplash.com/photo-1513188732907-5f732b831ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8am9yZGFuJTIwc2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60">
+            <a style="text-decoration: underline;">Air Jordan </a>
+        </div>
+
+    </div>
+    <div class="smcont" onclick="prooduct()">
+        <img style="width: 100%;height:600px;"
+            src="https://images.unsplash.com/photo-1478118012687-899ed7b11f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDc0MzQzOHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60">
+        <a style="text-decoration: underline;">WINTER COLLECTION</a>
+    </div>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+    <img style="margin-left: 20px;"
+        src="https://finishline.a.bigcontent.io/v1/static/FNL_052722_App_HP_Banner_Desktop_1213x295">
+    <img style="margin-top:25px;margin-left: 20px;"
+        src="https://media.finishline.com/i/finishline/FNL_081920_Shop_Your_Store_HP_Banner_Desktop_1213x150_1">
+    <!-- ************************************************************************** -->
+    <h2 style="margin-left: 20px;">URBAN JUNCTION: THE INTERSECTION OF STYLE & SPORT.</h2>
+    <div class="cont7">
+        <div class="mcont7">
+            <p>
+                Shoes, sneakers, runners, trainers, or kicks––whatever you call them, we have you covered with the
+                latest footwear to fit your style. Check out new arrivals from premium brands like Nike, adidas, Jordan,
+                Vans, Puma and more.
+
+                With on-trend hoodies, jackets, joggers and matching sets, we’ve got you covered with the hottest
+                sportswear. Whether you’re shopping for yourself or your friends, we carry the best gifts for runners,
+                top gifts from The North Face, Nike and adidas, as well as high-heat new arrivals from your favorite
+                brands. We stock the freshest sports gear and shoes to keep you at the top of your game. Complete any
+                look with a crossbody bag or New Era hat, and keep kicks fresh with premium shoe cleaning kits.
+
+
+
+                Stay up-to-date on the latest sneaker drops and sneaker trends when you follow our blog and social
+                handles. From running shoes to basketball shoes, classic high-tops and retro sneakers, Finish Line is
+                your one-stop shop. Plus, you can always buy online and pickup in-store, so you can get your favorite
+                sneakers even faster with free, same-day pickup at your local Finish Line!
+
+
+            </p>
+        </div>
+        <div class="mmcont7">
+
+            <a style="text-decoration: underline;">Jordan Retro Shoes</a>
+            <a style="text-decoration: underline;">Jordan Retro 1</a>
+            <a style="text-decoration: underline;">Nike VaporMax</a>
+            <a style="text-decoration: underline;">Nike Air Max</a>
+            <a style="text-decoration: underline;">Nike Air Max 90</a>
+            <a style="text-decoration: underline;">Nike Air Max 97</a>
+            <a style="text-decoration: underline;" >Nike Air Max 270</a>
+            <a style="text-decoration: underline;">Nike Air Force 1</a>
+            <a  style="text-decoration: underline;">Nike LeBron</a>
+
+        </div>
+        <div class="mmmcont7">
+            <a style="text-decoration: underline;">adidas Boost</a>
+            <a style="text-decoration: underline;">adidas Ultraboost</a>
+            <a style="text-decoration: underline;">adidas NMD</a>
+            <a style="text-decoration: underline;">adidas Superstar</a>
+            <a style="text-decoration: underline;">New Balance Shoes</a>
+            <a style="text-decoration: underline;">On Running Shoes</a>
+            <a style="text-decoration: underline;">Vans Shoes</a>
+            <a style="text-decoration: underline;">Steph Curry Shoes</a>
+            <a style="text-decoration: underline;">Reebok Sneakers</a>
+            <a style="text-decoration: underline;" >Timberland Boots</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
+<script>
+     function prooduct() {
+        window.location.href = "Mens.html";
+    }
+    function productt(){
+        window.location.href="Womens.html"
+    }
+    function producttt(){
+        window.location.href="shoes.html"
+    }
+    const search=document.getElementById("search")
+    search.addEventListener("click",(e)=>{
+        e.preventDefault()
+        window.location.href="Mens.html"
+    })
+</script>

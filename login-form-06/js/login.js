@@ -14,7 +14,7 @@ function loginData(){
       password
   }
   console.log(data);
-  fetch("https://colorful-helmet-slug.cyclic.app/auth/login", {
+  fetch("https://gifted-tights-yak.cyclic.app/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

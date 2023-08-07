@@ -11,7 +11,7 @@ const data={
     name
 }
 console.log(data);
-fetch("https://colorful-helmet-slug.cyclic.app/auth/signup", {
+fetch("https://gifted-tights-yak.cyclic.app/auth/signup", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

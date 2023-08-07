@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const main = document.getElementById("main");
   const search = document.getElementById("search");
 const category_filter=document.getElementById("category-filter")
-  const url = "https://colorful-helmet-slug.cyclic.app/men/show";
-  const Cart_url = "https://colorful-helmet-slug.cyclic.app/cart/add";
+  const url = "https://gifted-tights-yak.cyclic.app/products/show/?category=men";
+  const Cart_url = "https://gifted-tights-yak.cyclic.app/cart/add";
 const sorting=document.getElementById("price-sort")
   FetchData(url);
 
@@ -132,7 +132,7 @@ let debouncer;
      }
       const queryString = queryParams.toString();
      
-      const filteredUrl = `https://colorful-helmet-slug.cyclic.app/men/show?${queryString}`;
+      const filteredUrl = `https://gifted-tights-yak.cyclic.app/products/show?${queryString}`;
 
       FetchData(filteredUrl);
   }

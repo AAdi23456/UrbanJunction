@@ -492,7 +492,7 @@
 
         };
       //  console.log(data);
-        fetch("https://colorful-helmet-slug.cyclic.app/aadiswipe/payment", {
+        fetch("https://gifted-tights-yak.cyclic.app/aadiswipe/payment", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -502,7 +502,7 @@
         })
             .then(response => response.json())
             .then(responseData => {
-                // Process the response data and display it in the frontend
+                
                 console.log(responseData);
                 if (!responseData.message) {
                     return alert(responseData.error)

@@ -6,14 +6,14 @@ let discount_price=document.getElementById("discount-price")
 let total_pr=document.getElementById("total-pr")
 let total_item=document.getElementById("total-item")
 let total_pay=document.getElementById("total-pay")
-let Remove_Url=`https://colorful-helmet-slug.cyclic.app/cart/Remove/`
+let Remove_Url=`https://gifted-tights-yak.cyclic.app/cart/Remove/`
 let totalprice ;
 if(!data){
   alert("Please login first")
   window.location.href="../login-form-06/index.html"
 }
-fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
-    method: 'POST',
+fetch("https://gifted-tights-yak.cyclic.app/cart/show", {
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       "token":data
@@ -22,6 +22,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
    
   })
   .then(response => {
+    console.log(response);
     if (response.ok) {
       return response.json();
     } else {
@@ -106,7 +107,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
     }
   });
   function updateQuantity(cardId, newQuantity) {
-    const updateUrl = `https://colorful-helmet-slug.cyclic.app/cart/quantity/${cardId}`;
+    const updateUrl = `https://gifted-tights-yak.cyclic.app/cart/quantity/${cardId}`;
     fetch(updateUrl, {
       method: 'PATCH',
       headers: {
@@ -182,8 +183,8 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
     }
   });
   async function paymentpage(){
-    const res=await fetch("https://colorful-helmet-slug.cyclic.app/cart/show",{
-         method:"POST",
+    const res=await fetch("https://gifted-tights-yak.cyclic.app/cart/show",{
+         method:"GET",
          headers:{
           "Content-Type": "application/json",
           token:token
@@ -196,7 +197,7 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
         return alert("please add some product in cart")
       }
       try {
-        const url = "https://colorful-helmet-slug.cyclic.app/order/new";
+        const url = "https://gifted-tights-yak.cyclic.app/order/new";
        const obj={
         products:resdata,
         quantity:resdata.length,
@@ -208,25 +209,25 @@ fetch("https://colorful-helmet-slug.cyclic.app/cart/show", {
         const response = await fetch(url, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json", // Set the content type as JSON
-            // Add any other headers as required (e.g., Authorization header with token)
+            "Content-Type": "application/json", 
+            
             "token":token
           },
           body: JSON.stringify(obj), 
         });
       
         if (response.ok) {
-          // Successful response (status code 2xx)
-          const responseData = await response.json(); // Parse the JSON response
+         
+          const responseData = await response.json();
           console.log("Response data:", responseData);
           window.location.href="orders.html"
         } else {
-          // Handle error responses (status codes other than 2xx)
-          const errorData = await response.json(); // Parse the JSON error response
+       
+          const errorData = await response.json(); 
           console.error("Error data:", errorData);
         }
       } catch (error) {
-        // Handle any network errors or exceptions
+      
         console.error("An error occurred:", error);
       }
       
