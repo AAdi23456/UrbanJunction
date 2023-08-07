@@ -25,13 +25,13 @@ const sorting=document.getElementById("price-sort")
 
   function MappingtheResponse(data) {
       data.forEach(e => {
-          const cards = DynamicCards(e.img, e.title, e.brand, e.price);
+          const cards = DynamicCards(e._id,e.img, e.title, e.brand, e.price);
           main.insertAdjacentHTML('beforeend', cards);
       });
   }
 
-  function DynamicCards(img, title, brand, price) {
-      return `<div id="card">
+  function DynamicCards(id,img, title, brand, price) {
+      return `<div id="card" data-id="${id}">
           <img class="card_img" src="${img}">
           <p class="card_title">${title}</p>
           <h5 class="card_brand">${brand}</h5>
@@ -137,3 +137,11 @@ let debouncer;
       FetchData(filteredUrl);
   }
 });
+main.addEventListener("click", function (event) {
+    const card = event.target.closest("#card");
+    if (card) {
+      const cardId = card.getAttribute("data-id");
+      localStorage.setItem("selectedProductId", cardId);
+      window.location.href="exp.html"
+    }
+  });

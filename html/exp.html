@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-container {
+            display: flex;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .product-image {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+        #add-to-cart-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #2980b9;
+        }
+        nav {
+  background: linear-gradient(to right, #0066ff, #00ccff); /* Gradient blue background */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+  background-color: white;
+}
+@media (max-width: 768px) {
+   
+    .menu li {
+      display: none;
+    }
+
+    .menu li:last-child {
+      display: inline-block;
+      margin-right: 0;
+    }
+
+    .search-container {
+      flex: 1;
+      text-align: right;
+    }
+
+    .search-container input[type="text"] {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .filter-buttons {
+      display: none;
+    }
+  }
+
+  
+
+  .hamburger-menu {
+    display: none;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .filter-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+  }
+
+  .filter-list li {
+    padding: 10px;
+  }
+
+  .hamburger-menu.open .filter-list {
+    display: block;
+  }
+  .hamburger-menu {
+            display: none;
+            text-align: right;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .filter-list {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            right: 0;
+            top: 100%;
+            z-index: 9999;
+        }
+
+        .filter-list li {
+            padding: 10px;
+        }
+
+        .hamburger-menu.open .filter-list {
+            display: block;
+        }
+        .content {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #88e49f; /* Blue background */
+  color: #120505;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links a {
+  color: #170202;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  background-color: #0b0c0b; /* Light green background */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+    <img src="../images/urbanjunctionbg (1).png" style="width: 6%;">
+        </div>
+        <ul class="menu">
+          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./Mens.html">Men</a></li>
+          <li><a href="./shoes.html">Shoes</a></li>
+          <li><a href="./kids.html">Kids</a></li>
+          
+          <!-- <li class="dropdown">
+            <a href="#">Products</a>
+            <div class="dropdown-content">
+              <a href="#">Category 1</a>
+              <a href="#">Category 2</a>
+              <a href="#">Category 3</a>
+            </div>
+          </li> -->
+          <li><a href="https://aadi23456.github.io/">About</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Search" id="search">
+        </div>
+      </nav>
+    <div class="product-container">
+        <img class="product-image" src="" alt="Product Image">
+        <div class="product-details">
+            <h1 class="product-title"></h1>
+            <p class="product-description"></p>
+            <p class="product-price"></p>
+            <p class="sizes"> Sizes Avalabiale - S | M | X | XL | XXL | XXXL</p>
+            <button id="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+    <div class="content">
+       
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo"> Urbanjunction</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Mens.html">Shop</a>
+            <a href="https://aadi23456.github.io/">About Us</a>
+            <a href="https://aadi23456.github.io/">Contact</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p style="color: wheat;">&copy; 2023 Urbanjunction. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+
+</html>
+<script src="../javascript/exp.js"></script>
