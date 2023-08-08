@@ -35,7 +35,7 @@ fetch("https://gifted-tights-yak.cyclic.app/cart/show", {
 
       alert(data.msg)
       if(!data.length>0){
-        window.location.href="index.html"
+        window.location.href="../index.html"
       }
     }
     total_item.innerText=data.length

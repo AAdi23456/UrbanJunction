@@ -54,7 +54,7 @@
         const Logout=document.getElementById("Logout")
         Logout.addEventListener("click",(e)=>{
             localStorage.removeItem("token")
-            window.location.href="index.html"
+            window.location.href="../index.html"
         })
         const orderHistoryBody = document.getElementById("order-history-body");
         const token = JSON.parse(localStorage.getItem("token"));

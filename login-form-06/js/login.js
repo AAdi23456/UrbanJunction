@@ -37,7 +37,7 @@ function loginData(){
       localStorage.setItem("name", JSON.stringify(data.name));
       localStorage.setItem("email", JSON.stringify(data.email));
      localStorage.setItem("token", JSON.stringify(data.token));
-     window.location.href="../html/index.html"
+     window.location.href="../index.html"
       }
     }) 
     .catch(error => {
