@@ -11,10 +11,213 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="css/style.css">
+<style>
+	  #navbar{
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            background-color:  rgb(247, 246, 244);
+        }
+        @media (max-width: 1000px) {
+            #main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
+        @media (max-width: 700px) {
+            #main {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .filter-buttons {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+                text-align: right;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            .filter-list {
+                display: none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                background-color: #fff;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                position: absolute;
+                right: 0;
+                top: 100%;
+                z-index: 9999;
+            }
+
+            .filter-list li {
+                padding: 10px;
+            }
+
+            .hamburger-menu.open .filter-list {
+                display: block;
+            }
+        }
+        nav {
+  background: linear-gradient(to right, #0066ff, #00ccff); /* Gradient blue background */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+  background-color: white;
+}
+@media (max-width: 768px) {
+   
+    .menu li {
+      display: none;
+    }
+
+    .menu li:last-child {
+      display: inline-block;
+      margin-right: 0;
+    }
+
+    .search-container {
+      flex: 1;
+      text-align: right;
+    }
+
+    .search-container input[type="text"] {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .filter-buttons {
+      display: none;
+    }
+  }
+
+  
+
+  .hamburger-menu {
+    display: none;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .filter-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+  }
+
+  .filter-list li {
+    padding: 10px;
+  }
+
+  .hamburger-menu.open .filter-list {
+    display: block;
+  }
+  .hamburger-menu {
+            display: none;
+            text-align: right;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+</style>
 </head>
 
 <body>
+	<nav>
+        <div class="logo">
+    <img src="../images/urbanjunctionbg (1).png" style="width: 6%;">
+        </div>
+        <ul class="menu">
+			<li><a href="../html/Mens.html">Men</a></li>
+          <li><a href="../html/womens.html">Women</a></li>
+         
+          <li><a href="../html/index.html">Home</a></li>
+          
+          <!-- <li class="dropdown">
+            <a href="#">Products</a>
+            <div class="dropdown-content">
+              <a href="#">Category 1</a>
+              <a href="#">Category 2</a>
+              <a href="#">Category 3</a>
+            </div>
+          </li> -->
+          <li><a href="https://aadi23456.github.io/">About</a></li>
+        </ul>
+        
+      </nav>
 	<section class="ftco-section">
 		<div class="container">
 
@@ -30,7 +233,7 @@
 						</div>
 						<div class="login-wrap p-4 p-md-5">
 							<div class="row justify-content-center py-md-5">
-								<div class="col-lg-9">
+								<!-- <div class="col-lg-9">
 									<div class="social-wrap">
 										<h3 class="mb-3 text-center">Signup with this services</h3>
 										<p class="social-media d-flex justify-content-center">
@@ -47,7 +250,7 @@
 										<p class="or">
 											<span>or</span>
 										</p>
-									</div>
+									</div> -->
 									<form action="#" class="signup-form">
 										<div class="row">
 											<div class="col-md-6">
