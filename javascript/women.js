@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const main = document.getElementById("main");
     const search = document.getElementById("search");
   const category_filter=document.getElementById("category-filter")
-    const url = "https://gifted-tights-yak.cyclic.app/products/show?category=women";
+    const url = "https://gifted-tights-yak.cyclic.app/products/show?category=women&page=1";
     const Cart_url = "https://gifted-tights-yak.cyclic.app/cart/add";
   const sorting=document.getElementById("price-sort")
     FetchData(url);
@@ -22,16 +22,75 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error(error);
             });
     }
+    const nextButton = document.getElementById("next-button");
+    const prevButton = document.getElementById("prev-button");
+    let page=1
+    prevButton.disabled=true
+    nextButton.addEventListener("click", function(e){
+      page++
+      console.log(page);
+    prevButton.disabled=false
+      fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=men&page=${page}`)
+     
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.json();
+            })
+            .then(async data => {
+             
+              main.innerHTML=""
+              MappingtheResponse(data);
+              let newpage=page
+              const nextres=await fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=women&page=${newpage++}`)
+              const nextress=await nextres.json()
+              if(!nextress.data){
+                nextButton.disabled=true
+              }
+               // MappingtheResponse(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    })
+    prevButton.addEventListener("click",function(e){
+     // e.preventDefault()
+      page=page-1
+      console.log(page);
+      nextButton.disabled=false
+       
+        fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=women&page=${page}`)
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('Network response was not OK');
+                  }
+                  return response.json();
+              })
+              .then(data => {
+               
+                main.innerHTML=""
+                  MappingtheResponse(data);
+                  if(page<=1){
+                    prevButton.disabled=true
+                  }
+              })
+              .catch(error => {
+                  console.error(error);
+              });
+      
   
+     
+    })
     function MappingtheResponse(data) {
         data.forEach(e => {
-            const cards = DynamicCards(e.img, e.title, e.brand, e.price);
+            const cards = DynamicCards(e._id,e.img, e.title, e.brand, e.price);
             main.insertAdjacentHTML('beforeend', cards);
         });
     }
   
-    function DynamicCards(img, title, brand, price) {
-        return `<div id="card">
+    function DynamicCards(id,img, title, brand, price) {
+        return `<div id="card" data-id="${id}">
             <img class="card_img" src="${img}">
             <p class="card_title">${title}</p>
             <h5 class="card_brand">${brand}</h5>
@@ -133,9 +192,16 @@ document.addEventListener('DOMContentLoaded', function () {
        }
         const queryString = queryParams.toString();
        
-        const filteredUrl = `https://colorful-helmet-slug.cyclic.app/men/show?${queryString}`;
+        const filteredUrl = `https://gifted-tights-yak.cyclic.app/products/show?category=women&${queryString}`;
   
         FetchData(filteredUrl);
     }
   });
-  
+  main.addEventListener("click", function (event) {
+    const card = event.target.closest("#card");
+    if (card) {
+      const cardId = card.getAttribute("data-id");
+      localStorage.setItem("selectedProductId", cardId);
+      window.location.href="exp.html"
+    }
+  });

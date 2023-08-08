@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+ 
   const main = document.getElementById("main");
   const search = document.getElementById("search");
 const category_filter=document.getElementById("category-filter")
-  const url = "https://gifted-tights-yak.cyclic.app/products/show/?category=men";
+  const url = "https://gifted-tights-yak.cyclic.app/products/show/?category=men&page=1";
   const Cart_url = "https://gifted-tights-yak.cyclic.app/cart/add";
 const sorting=document.getElementById("price-sort")
   FetchData(url);
@@ -22,7 +23,66 @@ const sorting=document.getElementById("price-sort")
               console.error(error);
           });
   }
+  const nextButton = document.getElementById("next-button");
+  const prevButton = document.getElementById("prev-button");
+  let page=1
+  prevButton.disabled=true
+  nextButton.addEventListener("click", function(e){
+    page++
+    console.log(page);
+  prevButton.disabled=false
+    fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=men&page=${page}`)
+   
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not OK');
+              }
+              return response.json();
+          })
+          .then(async data => {
+           
+            main.innerHTML=""
+            MappingtheResponse(data);
+            let newpage=page
+            const nextres=await fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=men&page=${newpage++}`)
+            const nextress=await nextres.json()
+            if(!nextress.data){
+              nextButton.disabled=true
+            }
+             // MappingtheResponse(data);
+          })
+          .catch(error => {
+              console.error(error);
+          });
+  })
+  prevButton.addEventListener("click",function(e){
+   // e.preventDefault()
+    page=page-1
+    console.log(page);
+    nextButton.disabled=false
+     
+      fetch(`https://gifted-tights-yak.cyclic.app/products/show/?category=men&page=${page}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.json();
+            })
+            .then(data => {
+             
+              main.innerHTML=""
+                MappingtheResponse(data);
+                if(page<=1){
+                  prevButton.disabled=true
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    
 
+   
+  })
   function MappingtheResponse(data) {
       data.forEach(e => {
           const cards = DynamicCards(e._id,e.img, e.title, e.brand, e.price);
@@ -145,3 +205,4 @@ main.addEventListener("click", function (event) {
       window.location.href="exp.html"
     }
   });
+ 
