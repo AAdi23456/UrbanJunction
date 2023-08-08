@@ -15,7 +15,7 @@ Welcome to the frontend repository of our e-commerce application. This repositor
 
 ## Getting Started
 
-1. Clone this repository: `git clone https://github.com/your-username/e-commerce-frontend.git`
+1. Clone this repository: `git clone https://github.com/AAdi23456/UrbanJunction.git`
 
 2. Open `index.html` in your web browser.
 
