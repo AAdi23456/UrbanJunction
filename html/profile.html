@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1 id="wel">Welcome, John Doe!</h1>
-        <a href="#">Logout</a>
+        <a href="#" id="Logout">Logout</a>
     </header>
 
     <main>
@@ -30,29 +30,34 @@
         <section class="order-history">
             <h2>Order History</h2>
             <table>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>12345</td>
-                    <td>2023-07-20</td>
-                    <td>$100.00</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>67890</td>
-                    <td>2023-07-15</td>
-                    <td>$50.00</td>
-                    <td>Shipped</td>
-                </tr>
-                <!-- Add more order history rows as needed -->
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <!-- <th>Date</th> -->
+                        <th>Amount</th>
+                        <th> Payment Status</th>
+                        <th> delevery Status</th>
+                    </tr>
+                </thead>
+                <tbody id="order-history-body">
+                   
+                </tbody>
             </table>
         </section>
+        
     </main>
     <script>
+        const Logout=document.getElementById("Logout")
+        Logout.addEventListener("click",(e)=>{
+            localStorage.removeItem("token")
+            window.location.href="index.html"
+        })
+        const orderHistoryBody = document.getElementById("order-history-body");
+        const token = JSON.parse(localStorage.getItem("token"));
+        if(!token){
+            alert("please login first")
+            window.location.href="../login-form-06/index.html"
+        }
         const name=document.getElementById("name")
         const email=document.getElementById("email")
         const wel=document.getElementById("wel")
@@ -65,6 +70,35 @@
         name.innerText=namee
         email.innerText=emaile
         wel.innerText=`Welcome, ${namee}!`
+        fetch("https://gifted-tights-yak.cyclic.app/order/details", {
+    headers: {
+        "token": `${token}` 
+    }
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not OK');
+        }
+        return response.json();
+    })
+    .then(orderData => {
+        orderData[orderData.length-1].status="pending"
+        orderData.forEach(order => {
+            console.log(order);
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${order._id}</td>
+               
+                <td>₹${order.totalprice}</td>
+                <td>${order.status}</td>
+                <td>on the way</td>
+            `;
+            orderHistoryBody.appendChild(row);
+        });
+    })
+    .catch(error => {
+        console.error(error);
+    });
     </script>
 </body>
 
